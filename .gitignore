@@ -1,6 +1,10 @@
 /*
 !.gitignore
 !README.md
+!database.sql
+!package.json
+!package-lock.json
+!webpack.mix.js
 
 !wp-content
 wp-content/*

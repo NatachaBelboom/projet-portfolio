@@ -1,0 +1,180 @@
+//la section
+.contact{
+  &__title{
+    text-align: center;
+    line-height: 3rem;
+    margin-top: 10rem;
+  }
+
+  &__link{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+}
+
+.big-line{
+  position: relative;
+  white-space: nowrap;
+
+  &:after{
+    content:'';
+    height: 10px;
+    background-color: lighten($orange, 10);
+    position: absolute;
+    left: 6px;
+    right: -4px;
+    bottom: -1px;
+    z-index: -1;
+  }
+}
+
+//la page
+.contactMe{
+
+  &__informations{
+    border: 2px solid $orange;
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    margin-bottom: 4rem;
+
+    &--list{
+      display: flex;
+      flex-direction: column;
+      margin-left: 2rem;
+      gap: 2rem;
+
+      & div{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5rem;
+
+        & li a{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
+          color: #000;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &--item{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  & h3{
+    font-weight: 500;
+    margin: 2rem 0 1.5rem;
+  }
+}
+
+.form{
+  margin-bottom: 10rem;
+  &__field{
+    display: flex;
+    flex-direction: column;
+      &--last{
+        display: flex;
+        margin-top: 2rem;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+      &--checkbox{
+        width: 70%;
+      }
+  }
+
+  &__input, &__textarea{
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: none;
+    border: 1px solid $darkgreen;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: 'Museo-sans', sans-serif;
+    margin-bottom: 1rem;
+
+    &::placeholder{
+      font-size: 1.6rem;
+    }
+  }
+  &__textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 10rem;
+    height: 10rem;
+    max-height: 15rem;
+  }
+
+  &__label{
+    margin-bottom: 1rem;
+  }
+
+  &__checklabel a{
+    color: #000;
+
+  }
+
+  &__actions{
+    text-align: center;
+  }
+  &__button{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    margin-top: 0;
+  }
+
+  &__error, &__errors{
+    color: $error;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  &__feedback{
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 900px){
+  .contact{
+    &__title{
+      text-align: center;
+      line-height: 3rem;
+      margin-top: 10rem;
+      margin-bottom: 10rem;
+    }
+  }
+
+  .contactMe{
+    &__container{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 3.2rem;
+    }
+
+    &__informations{
+      max-width: 500px;
+    }
+  }
+
+  .form__field{
+
+    &--last{
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: 1200px){
+
+}

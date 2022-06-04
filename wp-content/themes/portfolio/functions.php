@@ -112,6 +112,7 @@ function dw_get_menu_items($location)
 
 
 // enregistrer le traitement du formulaire de contact personnalisé
+add_action('admin_post_nopriv_submit_contact_form', 'dw_handle_submit_contact_form');
 add_action('admin_post_submit_contact_form', 'dw_handle_submit_contact_form');
 
 function dw_handle_submit_contact_form()
@@ -138,7 +139,7 @@ function dw_get_contact_field_error($field)
         return '';
     }
 
-    return '<p class="form__error">Problème : ' . $_SESSION['feedback_contact_form']['errors'][$field] . '</p>';
+    return '<p class="form__error">' . $_SESSION['feedback_contact_form']['errors'][$field] . '</p>';
 }
 
 //Recuperer les modules pour la section module qui va sur toutes les pages
@@ -178,4 +179,30 @@ function dw_get_template_page(string $template)
     ]);
 
     return $query->posts[0] ?? null;    // 5. Retourner la premiere occurence pour cette requete (ou null)
+}
+
+function dw_mix($path)
+{
+    $path = '/' . ltrim($path, '/');
+
+    // Checker si le fichier demandé existe bien, sinon retourner NULL
+    if(! realpath(__DIR__ . '/public' . $path)) {
+        return;
+    }
+
+    // Check si le fichier mix-manifest existe bien, sinon retourner le fichier sans cache-bursting
+    if(! ($manifest = realpath(__DIR__ . '/public/mix-manifest.json'))) {
+        return get_stylesheet_directory_uri() . '/public' . $path;
+    }
+
+    // Ouvrir le fichier mix-manifest et lire le JSON
+    $manifest = json_decode(file_get_contents($manifest), true);
+
+    // Check si le fichier demandé est bien présent dans le mix manifest, sinon retourner le fichier sans cache-bursting
+    if(! array_key_exists($path, $manifest)) {
+        return get_stylesheet_directory_uri() . '/public' . $path;
+    }
+
+    // C'est OK, on génère l'URL vers la ressource sur base du nom de fichier avec cache-bursting.
+    return get_stylesheet_directory_uri() . '/public' . $manifest[$path];
 }

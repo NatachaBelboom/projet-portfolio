@@ -1,0 +1,46 @@
+.about{
+
+  &__subtitle{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  & img{
+    width: 100%;
+    height: auto;
+    margin-top: 4rem;
+    border-radius: 1.5rem;
+  }
+}
+.margin{
+  margin-bottom: 8rem;
+}
+
+@media (min-width: 900px){
+  .about{
+
+    & img{
+      margin-top: 0;
+    }
+    &__flex{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 5rem;
+    }
+  }
+  .reverse{
+    flex-direction: row-reverse;
+  }
+  .size{
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1200px){
+  .size{
+    max-width: 650px;
+  }
+}

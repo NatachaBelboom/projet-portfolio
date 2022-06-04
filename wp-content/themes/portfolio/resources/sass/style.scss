@@ -1,0 +1,84 @@
+@import "reset";
+@import "variables";
+@import "fonts";
+
+
+html{
+  background-color: #fff;
+  font-size: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: darken($color, 15);
+}
+
+body, body * {
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 90vh;
+  background-color: white;
+  font-family: 'Museo-sans', sans-serif;
+  font-weight: 300;
+}
+
+.border-foreground {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  border-radius: 1rem;
+  background-color: $color;
+  overflow: auto;
+}
+
+.sro {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+strong{
+  font-weight: 700;
+}
+em{
+  font-style: italic;
+}
+
+@media (min-width: 900px){
+  .border-foreground {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    border-radius: 1rem;
+    background-color: $color;
+    overflow: auto;
+  }
+}
+
+
+
+@import "index";
+@import "header";
+@import "about";
+@import "contact";
+@import "project";
