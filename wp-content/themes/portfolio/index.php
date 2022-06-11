@@ -35,14 +35,16 @@
                 </ul>
             </div>
             <div class="presentation__arrow-down">
-                <svg xmlns="http://www.w3.org/2000/svg" width="19.281" height="28.91" viewBox="0 0 19.281 28.91">
-                    <path id="Icon_ionic-ios-arrow-round-down" data-name="Icon ionic-ios-arrow-round-down"
-                          d="M30.159,26.311a1.312,1.312,0,0,0-1.848-.01L22.2,32.4V9.17a1.305,1.305,0,0,0-2.611,0V32.4L13.47,26.291a1.322,1.322,0,0,0-1.848.01,1.3,1.3,0,0,0,.01,1.838l8.335,8.274h0a1.466,1.466,0,0,0,.412.271,1.246,1.246,0,0,0,.5.1,1.309,1.309,0,0,0,.914-.372l8.335-8.274A1.279,1.279,0,0,0,30.159,26.311Z"
-                          transform="translate(-11.247 -7.875)" fill="#77a38e"/>
-                </svg>
+                <a href="#projects">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19.281" height="28.91" viewBox="0 0 19.281 28.91">
+                        <path id="Icon_ionic-ios-arrow-round-down" data-name="Icon ionic-ios-arrow-round-down"
+                              d="M30.159,26.311a1.312,1.312,0,0,0-1.848-.01L22.2,32.4V9.17a1.305,1.305,0,0,0-2.611,0V32.4L13.47,26.291a1.322,1.322,0,0,0-1.848.01,1.3,1.3,0,0,0,.01,1.838l8.335,8.274h0a1.466,1.466,0,0,0,.412.271,1.246,1.246,0,0,0,.5.1,1.309,1.309,0,0,0,.914-.372l8.335-8.274A1.279,1.279,0,0,0,30.159,26.311Z"
+                              transform="translate(-11.247 -7.875)" fill="#77a38e"/>
+                    </svg>
+                </a>
             </div>
         </section>
-        <section class="layout__someProject projects slide-in">
+        <section class="layout__someProject projects slide-in" id="projects">
             <span class="line"></span>
             <h2 class="projects__title title" role="heading" aria-level="2">Quelques-uns de mes projets</h2>
             <div class="projects__container">
@@ -57,11 +59,11 @@
                 projets</a>
         </section>
         <section class="layout__about sectionAbout slide-in">
-            <div class="sectionAbout__intro">
+            <div class="sectionAbout__intro" itemscope itemtype="https://schema.org/Person">
                 <span class="line"></span>
                 <h2 class="about__title title" role="heading" aria-level="2">A propos d'une designer créative</h2>
                 <p class="about__text">
-                    Elève en Bac2 à l'HEPL de Seraing, en infographie option Web, je m'épanouis et me construis
+                    Elève en Bac2 à l'HEPL de <span itemprop="workLocation">Seraing</span>, en <span itemprop="jobTitle">infographie</span> option Web, je m'épanouis et me construis
                     professionnellement en créant des <strong>sites Web</strong> dans lesquels se reflète ma <strong>personnalité artistique et
                     créative</strong>, caractérisée par un style épuré, sobre et percutant.
                 </p>

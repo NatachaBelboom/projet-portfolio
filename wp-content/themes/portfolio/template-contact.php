@@ -26,7 +26,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24.515" height="24.515" viewBox="0 0 24.515 24.515">
                                     <path id="Icon_metro-phone" data-name="Icon metro-phone" d="M20.549,18.565c-1.634,1.634-1.634,3.269-3.269,3.269s-3.269-1.634-4.9-3.269-3.269-3.269-3.269-4.9,1.634-1.634,3.269-3.269-3.269-6.537-4.9-6.537-4.9,4.9-4.9,4.9c0,3.269,3.358,9.9,6.537,13.075s9.806,6.537,13.075,6.537c0,0,4.9-3.269,4.9-4.9s-4.9-6.537-6.537-4.9Z" transform="translate(-2.571 -3.856)"/>
                                 </svg>
-                                <p itemprop="telephone">04/97 79 42 75</p>
+                                <p itemprop="telephone">0497/79.42.75</p>
                             </li>
                             <div>
                                 <li class="contactMe__informations--item">

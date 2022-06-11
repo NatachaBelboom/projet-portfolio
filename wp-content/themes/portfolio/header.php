@@ -1,10 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Natacha Belboom">
+    <meta name="description" content="Portfolio de Natacha Belboom, une jeune web designer et developer">
+    <meta name="keywords" content="portfolio, web, designer, developer, projets, hepl">
     <link rel="stylesheet" type="text/css" href="<?= dw_mix('css/style.css'); ?>">
     <script type="text/javascript" src="<?= dw_mix('js/script.js'); ?>"></script>
 
@@ -16,15 +19,21 @@
 <div class="border-foreground">
     <header class="header">
         <div class="container header__header">
-            <h1 role="heading" aria-level="1" class="sro"><?= the_title(); ?></h1>
+            <h1 role="heading" aria-level="1"
+                class="sro"><?= is_front_page() ? 'Accueil · ' . get_bloginfo('name') : wp_title('') . ' · ' . get_bloginfo('name') ?></h1>
             <div class="logo">
                 <a href="/">
-                    <svg id="Calque_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.79 69.11" width="30" height="30">
-                        <g>
-                            <circle cx="12.76" cy="60.43" r="8.68" style="fill:#77A38E;"/>
+                    <svg id="Calque_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.78 69.14" width="30"
+                         height="30">
+                        <g id="Calque_2-2">
+                            <path d="M13.36,51.77c-.2,.01-.4,.02-.6,.02s-.4-.01-.6-.02c.2,0,.4-.02,.6-.02s.4,.01,.6,.02Z"
+                                  style="fill:#77a38e;"/>
                             <path d="M69.1,60.43c0,4.79-3.89,8.68-8.68,8.68-2.54,0-4.84-1.1-6.43-2.84l-.05-.06L2.84,15.11l-.4-.4c-1.51-1.56-2.44-3.69-2.44-6.03C0,3.89,3.89,0,8.68,0c2.34,0,4.47,.93,6.03,2.44l.4,.4,51.15,51.16,.35,.34c1.54,1.57,2.49,3.71,2.49,6.09Z"
-                                  style="fill:#77A38E;"/>
-                            <circle cx="61.1" cy="8.68" r="8.68" style="fill:#77A38E;"/>
+                                  style="fill:#77a38e;"/>
+                            <path d="M20.17,53.99v6.47c0,4.79-3.61,8.68-8.04,8.68s-8.04-3.89-8.04-8.68v-6.47c0-4.79,3.6-8.68,8.04-8.68s8.04,3.89,8.04,8.68Z"
+                                  style="fill:#77a38e;"/>
+                            <path d="M69.78,8.68v6.47c0,4.79-3.72,8.68-8.29,8.68s-8.29-3.89-8.29-8.68v-6.47c0-4.79,3.71-8.68,8.29-8.68s8.29,3.89,8.29,8.68Z"
+                                  style="fill:#77a38e;"/>
                         </g>
                     </svg>
                 </a>
