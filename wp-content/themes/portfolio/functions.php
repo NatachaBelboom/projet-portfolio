@@ -164,7 +164,7 @@ function dw_include(string $partial, array $variables = [])
     // =>/Utilisateurs/.../wp-content/dw/partials/post.php
 
     extract($variables);
-    include(__DIR__ . '/partials/' . $partial . '.php');
+    include(__DIR__ . '/Partials/' . $partial . '.php');
 }
 
 function dw_get_template_page(string $template)

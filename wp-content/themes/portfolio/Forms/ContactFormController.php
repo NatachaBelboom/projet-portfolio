@@ -53,12 +53,19 @@ class ContactFormController extends BaseFormController
             'post_status' => 'publish'
         ]);
 
-        // Générer un email contenant l'URL vers le post en question
-        $feedback = 'Bonjour, Vous avez un nouveau message.<br />';
-        $feedback .= 'Y accéder : ' . get_edit_post_link($id);
+
+        $sender    = $this->data[ 'email' ];
+        $firstname = $this->data[ 'firstname' ];
+        $lastname  = $this->data[ 'lastname' ];
+        $message = $this->data['message'];
+
+        $content = 'Bonjour, un nouveau message de contact a été envoyé.';
+        $content .= 'de ' . ucfirst( $firstname ) . ' ' . strtoupper( $lastname );
+        $content .= 'email : ' . $sender;
+        $content .= 'Message : ' . $message;
 
         // Envoyer l'email à l'admin
-        wp_mail(get_bloginfo('admin_email'), 'Nouveau message !', $feedback);
+        wp_mail(get_bloginfo('admin_email'), 'Nouveau message !', $content);
     }
 
     protected function redirectWithSuccess()

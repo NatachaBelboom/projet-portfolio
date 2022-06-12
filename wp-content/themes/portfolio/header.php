@@ -9,7 +9,6 @@
     <meta name="description" content="Portfolio de Natacha Belboom, une jeune web designer et developer">
     <meta name="keywords" content="portfolio, web, designer, developer, projets, hepl">
     <link rel="stylesheet" type="text/css" href="<?= dw_mix('css/style.css'); ?>">
-    <script type="text/javascript" src="<?= dw_mix('js/script.js'); ?>"></script>
 
     <?php wp_head(); ?>
 

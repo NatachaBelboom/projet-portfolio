@@ -19,6 +19,7 @@ abstract class BaseFormController
     protected function verifyNonce()
     {
         $nonce = $this->data['_wpnonce'] ?? null;
+        /*var_dump($nonce); die();*/
 
         if(! $nonce || ! wp_verify_nonce($nonce, $this->getNonceKey())) {
             die('Unauthorized.');
