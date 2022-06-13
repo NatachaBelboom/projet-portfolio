@@ -5,7 +5,7 @@
             <span class="line"></span>
             <h2 class="projects__title title" role="heading" aria-level="2">Mes projets</h2>
             <div class="projects__container">
-                <?php if (($projects = dw_get_projects(6))->have_posts()) : while ($projects->have_posts()) : $projects->the_post();
+                <?php if (($projects = dw_get_projects(10))->have_posts()) : while ($projects->have_posts()) : $projects->the_post();
                     dw_include('project', ['modifier' => 'index']);
                 endwhile;
                 else: ?>

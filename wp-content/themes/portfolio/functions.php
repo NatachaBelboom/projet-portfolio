@@ -148,8 +148,9 @@ function dw_get_projects($count = 10)
     // 1. on instancie l'objet WP_QUERY
     $projects = new WP_Query([
         'post_type' => 'project',
-        'orderby' => 'date',
-        'order' => 'ASC',
+        'orderby' => 'meta_value',
+        'meta_key' => 'date',
+        'order' => 'DESC',
         'posts_per_page' => $count,
     ]);
 
